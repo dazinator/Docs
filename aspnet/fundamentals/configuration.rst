@@ -141,6 +141,8 @@ Each call to :dn:method:`~Microsoft.Extensions.DependencyInjection.OptionsServic
 
 You can have multiple :dn:iface:`~Microsoft.Extensions.Options.IConfigureOptions\<TOptions>` services for the same option type and they are all applied in order. In the :ref:`example <options-example>` above, the values of ``Option1`` and ``Option2`` are both specified in `appsettings.json`, but the value of ``Option1`` is overridden by the configured delegate with the value "value1_from_action".
 
+Note: You can also assign default values within the constructor of the options class. Values read from configuration sources will then overwrite those default assignments.
+
 .. _custom-config-providers:
 
 Writing custom providers
